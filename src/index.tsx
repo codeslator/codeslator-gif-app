@@ -1,13 +1,10 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { CodesGifsApp } from './CodesGifsApp';
 import reportWebVitals from './reportWebVitals';
+import './styles/styles.scss'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <CodesGifsApp />,
   document.getElementById('root')
 );
 
