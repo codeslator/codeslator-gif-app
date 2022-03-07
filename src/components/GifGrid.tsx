@@ -18,7 +18,7 @@ export const GifGrid = ({ category }: GifGridProps) => {
           <h4 className="text-center">Loading...</h4>
         )}
         {gifs.map((gif) => (
-          <div className="col-2">
+          <div className="col-xs-6 col-sm-4 col-md-3 col-lg-2">
             <GifGridItem key={gif.id} gif={gif} />
           </div>
         ))}
