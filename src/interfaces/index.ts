@@ -7,4 +7,14 @@ export interface AddCategoryProps {
 
 export type GifGridProps = {
   category: string;
+};
+
+export interface GifGridItemProps {
+  gif: Gif;
+}
+
+export type Gif = {
+  id: string;
+  title: string;
+  url: string;
 }

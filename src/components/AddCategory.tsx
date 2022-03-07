@@ -10,9 +10,10 @@ export const AddCategory = ({ categories, setCategories }: AddCategoryProps) => 
 
   const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
-    setCategories((prev: string[]) => [...prev, value])
-    console.log(categories)
-  }
+    if(value !== '') {
+      setCategories((prev: string[]) => [...prev, value]);
+    }
+  };
 
   return (
     <>

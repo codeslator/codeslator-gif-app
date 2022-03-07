@@ -1,10 +1,11 @@
 import ReactDOM from 'react-dom';
-import { CodesGifsApp } from './CodesGifsApp';
 import reportWebVitals from './reportWebVitals';
+import { CodeslatorGifApp } from './CodesGifsApp';
+import 'animate.css';
 import './styles/styles.scss'
 
 ReactDOM.render(
-  <CodesGifsApp />,
+  <CodeslatorGifApp />,
   document.getElementById('root')
 );
 
