@@ -1,19 +1,21 @@
 import { useState } from 'react';
 import { gifApi } from '../apis/gifApi';
-import { Gif } from '../interfaces/index';
+import { GifData } from '../interfaces/index';
+
+const initialState = {
+  gifs: [],
+  isLoading: true,
+}
 
 const useGif = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false)
-  const [gifs, setGifs] = useState<Gif[]>([]);
+  const [state, setState] = useState<GifData>(initialState);
 
   const fetchGifs = async (search: string) => {
-    setIsLoading(true);
     const { data } = await gifApi.get('', {
       params: {
         q: encodeURI(search)
       }
     });
-    setIsLoading(false);
     const gifs = data.data.map((img: any) => {
       return {
         id: img.id,
@@ -21,12 +23,12 @@ const useGif = () => {
         url: img.images?.downsized_medium.url
       };
     });
-    setGifs(gifs);
+    setState({ gifs, isLoading: false });
   }
 
   return {
-    gifs,
-    isLoading,
+    gifs: state.gifs,
+    isLoading: state.isLoading,
     fetchGifs,
   };
 };

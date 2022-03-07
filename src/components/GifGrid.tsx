@@ -4,7 +4,7 @@ import useGif from '../hooks/useGif';
 import { GifGridItem } from './GifGridItem';
 
 export const GifGrid = ({ category }: GifGridProps) => {
-  const { fetchGifs, gifs } = useGif();
+  const { fetchGifs, gifs, isLoading } = useGif();
 
   useEffect(() => {
     fetchGifs(category)
@@ -14,6 +14,9 @@ export const GifGrid = ({ category }: GifGridProps) => {
     <>
       <h3 className="mb-3">{category}</h3>
       <div className="row">
+        {isLoading && (
+          <h4 className="text-center">Loading...</h4>
+        )}
         {gifs.map((gif) => (
           <div className="col-2">
             <GifGridItem key={gif.id} gif={gif} />

@@ -18,3 +18,8 @@ export type Gif = {
   title: string;
   url: string;
 }
+
+export type GifData = {
+  gifs: Gif[],
+  isLoading: boolean;
+}
