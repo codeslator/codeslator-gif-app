@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react'
 
 export interface AddCategoryProps {
-  categories: string[],
+  categories?: string[],
   setCategories: Dispatch<SetStateAction<string[]>>
 }
 

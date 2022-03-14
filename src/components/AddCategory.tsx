@@ -1,7 +1,7 @@
-import { useState, FormEvent, SyntheticEvent } from 'react';
+import { useState, FormEvent, SyntheticEvent, FC } from 'react';
 import { AddCategoryProps } from '../interfaces/index';
 
-export const AddCategory = ({ categories, setCategories }: AddCategoryProps) => {
+export const AddCategory: FC<AddCategoryProps> = ({ categories, setCategories }) => {
   const [value, setValue] = useState<string>('');
 
   const handleInput = (event: FormEvent<HTMLInputElement>) => {
@@ -12,6 +12,7 @@ export const AddCategory = ({ categories, setCategories }: AddCategoryProps) => 
     e.preventDefault();
     if(value !== '') {
       setCategories((prev: string[]) => [...prev, value]);
+      setValue('');
     }
   };
 
@@ -35,6 +36,7 @@ export const AddCategory = ({ categories, setCategories }: AddCategoryProps) => 
           </div>
         </div>
       </form>
+      <p>{value}</p>
     </>
   )
 }

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing GifGridItem component Should to show the component correctly 1`] = `
+<div
+  className="card mb-3 animate__animated animate__fadeIn"
+>
+  <img
+    alt="A title"
+    className="card-img-top"
+    src="https://localhost:3000/image.png"
+  />
+  <div
+    className="card-body"
+  >
+    <h5
+      className="card-title"
+    >
+      A title
+    </h5>
+  </div>
+</div>
+`;

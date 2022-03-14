@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CodesGifApp Component Should to show a list of categories 1`] = `
+<Fragment>
+  <div
+    className="container mt-3"
+  >
+    <h1>
+      CodesGifs App
+    </h1>
+    <AddCategory
+      categories={
+        Array [
+          "Pokemon",
+          "Naruto",
+        ]
+      }
+      setCategories={[Function]}
+    />
+    <div
+      className="mt-3"
+    >
+      <GifGrid
+        category="Pokemon"
+        key="0"
+      />
+      <hr />
+      <GifGrid
+        category="Naruto"
+        key="1"
+      />
+      <hr />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`CodesGifApp Component Should to show the compoenent correctly 1`] = `
+<Fragment>
+  <div
+    className="container mt-3"
+  >
+    <h1>
+      CodesGifs App
+    </h1>
+    <AddCategory
+      categories={Array []}
+      setCategories={[Function]}
+    />
+    <div
+      className="mt-3"
+    />
+  </div>
+</Fragment>
+`;

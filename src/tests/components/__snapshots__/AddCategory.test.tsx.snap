@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddCategory Component Should to show the component correctly 1`] = `
+<Fragment>
+  <form
+    onSubmit={[Function]}
+  >
+    <h2>
+      Search Category
+    </h2>
+    <div
+      className="row"
+    >
+      <div
+        className="col-9"
+      >
+        <input
+          className="form-control"
+          id="category"
+          onChange={[Function]}
+          placeholder="Category"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="col-3"
+      >
+        <button
+          className="btn btn-primary btn-full"
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+  <p />
+</Fragment>
+`;

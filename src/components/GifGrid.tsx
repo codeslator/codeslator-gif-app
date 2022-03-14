@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import { GifGridProps } from '../interfaces/index';
 import useGif from '../hooks/useGif';
 import { GifGridItem } from './GifGridItem';
 
-export const GifGrid = ({ category }: GifGridProps) => {
+export const GifGrid: FC<GifGridProps> = ({ category }) => {
   const { fetchGifs, gifs, isLoading } = useGif();
 
   useEffect(() => {
@@ -18,8 +18,8 @@ export const GifGrid = ({ category }: GifGridProps) => {
           <h4 className="text-center">Loading...</h4>
         )}
         {gifs.map((gif) => (
-          <div className="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-            <GifGridItem key={gif.id} gif={gif} />
+          <div className="col-xs-6 col-sm-4 col-md-3 col-lg-2" key={gif.id} >
+            <GifGridItem gif={gif} />
           </div>
         ))}
       </div>

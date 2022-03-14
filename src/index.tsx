@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import { CodeslatorGifApp } from './CodesGifsApp';
+import { CodeslatorGifApp } from './CodeslatorGifsApp';
 import 'animate.css';
 import './styles/styles.scss'
 

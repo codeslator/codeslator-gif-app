@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import { GifGridItemProps } from '../interfaces/index';
 
-export const GifGridItem = ({ gif }: GifGridItemProps) => {
+export const GifGridItem: FC<GifGridItemProps> = ({ gif }) => {
   const { title, url } = gif;
   return (
     <div className="card mb-3 animate__animated animate__fadeIn">
